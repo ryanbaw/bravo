@@ -89,7 +89,7 @@ ASRC = src/avr/os_cpu_a.S
 DEBUG = dwarf-2
 
 # List any extra directories to look for include files here.
-# 用于添加额外include头文件
+# use for external include head file
 EXTRAINCDIRS = 
 
 # Compiler flag to set the C Standard level.
@@ -163,7 +163,7 @@ SCANF_LIB =
 MATH_LIB = -lm
 
 # List any extra directories to look for libraries here.
-# 添加额外库文件
+# Use for external lib file
 EXTRALIBDIRS = 
 
 #---------------- Linker Options ----------------
@@ -195,8 +195,8 @@ export CC SHELL OBJCOPY OBJDUMP SIZE AR NM REMOVE REMOVEDIR COPY WINSHELL
 # Define Messages
 # English
 MSG_ERRORS_NONE 	= Errors: none
-MSG_BEGIN 			= -------- 编译开始 --------
-MSG_END 			= -------- 编译结束  --------
+MSG_BEGIN 			= -------- START --------
+MSG_END 			= --------  END  --------
 MSG_SIZE_BEFORE 	= Size before: 
 MSG_SIZE_AFTER 		= Size after:
 MSG_COFF 			= Converting to AVR COFF:
@@ -214,10 +214,10 @@ MSG_CREATING_LIBRARY= Creating library:
 
 export MSG_COMPILING MSG_COMPILING_CPP MSG_ASSEMBLING
 
-# 列出所有的目标文件 *.o
+# list all object files *.o
 OBJ = $(SRC:%.c=$(OUTPUT)/%.o) $(ASRC:%.S=$(OUTPUT)/%.o) 
 
-# 列出所有的列表文件 *.lst
+# list all list files *.lst
 LST = $(SRC:%.c=$(OUTPUT)/%.lst) $(ASRC:%.S=$(OUTPUT)/%.lst) 
 
 # Compiler flags to generate dependency files.

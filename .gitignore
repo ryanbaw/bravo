@@ -16,3 +16,13 @@
 *.exe
 *.out
 *.app
+
+# Compile the generated files
+.dep
+objs
+atmega128_ucos2.eep
+atmega128_ucos2.elf
+atmega128_ucos2.hex
+atmega128_ucos2.lss
+atmega128_ucos2.map
+atmega128_ucos2.sym
